@@ -14,7 +14,6 @@ export function MilestoneSection() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-                    {/* Milestone Cards */}
                     {[
                         { icon: <DraftingCompass size={24} />, title: "Desarrollo Inicial", desc: "Lanzamiento y planeación estructural del Circuito Emperador." },
                         { icon: <Gavel size={24} />, title: "Regularización", desc: "Procesos administrativos exhaustivos ante las autoridades correspondientes." },

@@ -39,7 +39,7 @@ export function Navigation() {
             )}>
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                     <div className="text-2xl font-black tracking-tighter text-primary">
-                        <Image className="size-12 md:size-20" src={logo} alt="Logo" width={1024} height={1024} />
+                        <Image className="size-12 md:size-20" src={logo} alt="Logo" width={1024} height={1024} loading="eager" />
                     </div>
 
                     {/* Desktop Nav */}
