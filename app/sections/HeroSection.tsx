@@ -28,7 +28,7 @@ export function HeroSection() {
                     <div className="flex flex-wrap gap-4">
                         <Button size="lg" className="font-bold flex items-center gap-2 group capitalize" asChild>
                             <Link href="#convocatoria" className="text-primary">
-                                Ver convocatoria <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                Solicitar escrituras <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
                     </div>

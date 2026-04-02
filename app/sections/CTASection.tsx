@@ -6,8 +6,12 @@ import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import { Handshake } from "lucide-react";
+import { useState } from "react";
+import { ContactFormDialog } from "../components/ContactForm";
 
 export function CTASection() {
+    const [open, setOpen] = useState(false);
+
     return (
         <section className="py-16 md:py-24 xl:py-32 px-6 bg-primary" id="convocatoria">
             <div className="max-w-7xl mx-auto">
@@ -19,10 +23,8 @@ export function CTASection() {
                         className="lg:col-span-2 bg-white/5 backdrop-blur-md border border-white/10 p-6 xl:p-10 md:p-16 rounded-xl flex flex-col justify-between"
                     >
                         <div>
-                            <Badge variant="outline" className="text-xs text-secondary-container border-secondary-container font-black tracking-[0.15em] xl:tracking-[0.3em] uppercase mb-6">
-                                Instrucciones de Notaría
-                            </Badge>
-                            <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-white mb-8 tracking-tighter">Etapa Final de Trámite</h2>
+                            <Badge variant="outline" className="text-xs text-secondary-container border-secondary-container font-black tracking-[0.15em] xl:tracking-[0.3em] uppercase mb-6">¡Agenda cita para tus escrituras!</Badge>
+                            <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-white mb-8 tracking-tighter">Instrucciones para escriturar tu terreno de circuito emperadores</h2>
                             <p className="text-white/70 xl:text-xl max-w-lg mb-10 font-light">Es fundamental que todos los propietarios acudan a nuestras oficinas corporativas para finalizar su proceso.</p>
                         </div>
 
@@ -30,7 +32,7 @@ export function CTASection() {
                             {[
                                 "Actualización de estado de cuenta",
                                 "Liquidación de saldos pendientes",
-                                "Recepción de lineamientos notariales"
+                                "Recepción de documentos para titulación",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 text-white font-medium">
                                     <CheckCircle2 className="text-secondary-container shrink-0" size={24} />
@@ -39,8 +41,8 @@ export function CTASection() {
                             ))}
                         </div>
 
-                        <Button variant="secondary" size="lg" className="w-full md:w-max font-black xl:text-lg xl:py-8 xl:px-12">
-                            Agendar Cita en Oficinas
+                        <Button variant="secondary" size="lg" className="w-full md:w-max font-black xl:text-lg xl:py-8 xl:px-12" onClick={() => setOpen(true)}>
+                            Click aquí para escriturar
                         </Button>
                     </motion.div>
 
@@ -62,6 +64,7 @@ export function CTASection() {
                     </motion.div>
                 </div>
             </div>
+            <ContactFormDialog open={open} onOpenChange={setOpen} />
         </section>
     );
 }
