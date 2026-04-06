@@ -24,15 +24,17 @@ export function CTASection() {
                     >
                         <div>
                             <Badge variant="outline" className="text-xs text-secondary-container border-secondary-container font-black tracking-[0.15em] xl:tracking-[0.3em] uppercase mb-6">¡Agenda cita para tus escrituras!</Badge>
-                            <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-white mb-8 tracking-tighter">Instrucciones para escriturar tu terreno de circuito emperadores</h2>
+                            <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-white mb-8 tracking-tighter">Instrucciones para obtener tu título de Circuito Emperadores</h2>
                             <p className="text-white/70 xl:text-xl max-w-lg mb-10 font-light">Es fundamental que todos los propietarios acudan a nuestras oficinas corporativas para finalizar su proceso.</p>
                         </div>
 
                         <div className="space-y-5 mb-12">
                             {[
-                                "Actualización de estado de cuenta",
-                                "Liquidación de saldos pendientes",
-                                "Recepción de documentos para titulación",
+                                "Actualización de estado de cuenta.",
+                                "Liquidación de saldos pendientes.",
+                                "Recepción de documentos para titulación.",
+                                "Emisión de constancia de posesion de lote.",
+                                "Emisión de carta de liberacion de lote.",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 text-white font-medium">
                                     <CheckCircle2 className="text-secondary-container shrink-0" size={24} />

@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
     title: "Atención Colono de Circuito Emperador",
-    description: "Después de casi tres años de trabajo constante, nos complace informarles que el proyecto ha concluido satisfactoriamente su proceso administrativo y de regularización, lo que permite iniciar formalmente la etapa de escrituración individual de cada lote.",
+    description: "Después de casi tres años de trabajo constante, nos complace informarles que el proyecto ha concluido satisfactoriamente su proceso administrativo y de regularización, lo que permite iniciar formalmente la etapa de titulación individual de cada lote.",
 };
 
 export default function RootLayout({

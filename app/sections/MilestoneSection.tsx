@@ -18,7 +18,7 @@ export function MilestoneSection() {
                         { icon: <DraftingCompass size={24} />, title: "Desarrollo Inicial", desc: "Lanzamiento y planeación estructural del Circuito Emperador." },
                         { icon: <Gavel size={24} />, title: "Regularización", desc: "Procesos administrativos exhaustivos ante las autoridades correspondientes." },
                         { icon: <Verified size={24} />, title: "Certificación", desc: "Validación de Desarrollo Urbano y cumplimiento de requisitos municipales." },
-                        { icon: <History size={24} />, title: "Escrituración", desc: "Entrega de títulos de propiedad individuales para cada lote.", active: true },
+                        { icon: <History size={24} />, title: "Título Individual", desc: "Entrega de títulos de propiedad individuales para cada lote.", active: true },
                     ].map((step, i) => (
                         <motion.div
                             key={i}

@@ -29,7 +29,7 @@ export function DetailSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter">Certeza Jurídica y Municipal</h2>
+                    <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter">Certeza Jurídica</h2>
                     <div className="space-y-6 text-on-surface-variant font-medium leading-relaxed text-lg">
                         <p>Tras tres años de labor ininterrumpida, el proceso administrativo y de regularización ha concluido satisfactoriamente. Este hito permite la expedición de escrituras individuales para cada lote, consolidando legalmente su inversión.</p>
                         <p>Las revisiones efectuadas por <span className="font-bold text-primary">Desarrollo Urbano</span> y el estricto cumplimiento de los requerimientos municipales garantizan que cada trámite cuente con el respaldo institucional necesario para su total tranquilidad.</p>

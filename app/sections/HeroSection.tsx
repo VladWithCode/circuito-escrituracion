@@ -6,6 +6,9 @@ import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import heroImage from "@/app/assets/hero-circuito.webp";
+import Image from "next/image";
+
 export function HeroSection() {
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden" id="inicio">
@@ -20,10 +23,10 @@ export function HeroSection() {
                         Circuito Emperador
                     </Badge>
                     <h1 className="text-6xl md:text-8xl font-black text-primary leading-[0.85] tracking-tighter mb-8">
-                        Proyecto <br /> Finalizado
+                        Proceso de Titulación Individual
                     </h1>
                     <p className="text-2xl md:text-3xl font-light text-on-surface-variant max-w-xl mb-10 leading-snug">
-                        Damos inicio formal al proceso de <span className="font-bold text-secondary">Escrituración Individual</span>.
+                        Damos inicio formal al proceso de <span className="font-bold text-secondary">entrega de títulos individuales.</span>
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <Button size="lg" className="font-bold flex items-center gap-2 group capitalize" asChild>
@@ -42,11 +45,12 @@ export function HeroSection() {
                 >
                     <div className="relative aspect-4/5 w-full">
                         <div className="absolute inset-0 bg-primary/10 rounded-xl rotate-3 scale-105"></div>
-                        <img
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb1THPoxpIpq50xlJluf6kWMEqhXsYqp0E0brCZwBzlHYIhYSZujT3VzurcTmlo9mQMohSIPxhtbwHOqtrxKLMpxnJnOL9NrUVbdnABiZv5iD3u5VfhWrw-jvxIkZj2kfQEhQLpDiJDTYEU4roJitISAKD-WJf7sLjHte8cb65KmSEmdGaJSygLg-QHXBMVZcNK2ToDfurEBGXYTXToT91IiJ3tljJGxcWuNlJrXs6AoqDc1atSGkjbU7nKpN8YKG0ZiNyBvhudFIZ"
-                            alt="Luxury real estate development"
-                            className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl z-20"
-                            referrerPolicy="no-referrer"
+                        <Image
+                            className="h-full w-full object-cover rounded"
+                            alt="Imagen de la entrada a Circuito Emperador"
+                            src={heroImage}
+                            width={1920}
+                            height={1440}
                         />
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
