@@ -23,7 +23,9 @@ export function CTASection() {
                         className="lg:col-span-2 bg-white/5 backdrop-blur-md border border-white/10 p-6 xl:p-10 md:p-16 rounded-xl flex flex-col justify-between"
                     >
                         <div>
-                            <Badge variant="outline" className="text-xs text-secondary-container border-secondary-container font-black tracking-[0.15em] xl:tracking-[0.3em] uppercase mb-6">¡Agenda cita para obtener tu titulo individual!</Badge>
+                            <Badge variant="outline" className="whitespace-normal h-auto text-center text-xs text-secondary-container border-secondary-container font-black tracking-[0.15em] xl:tracking-[0.3em] uppercase mb-6">
+                                ¡Agenda cita para obtener tu titulo individual!
+                            </Badge>
                             <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-white mb-8 tracking-tighter">Instrucciones para obtener tu título de Circuito Emperadores</h2>
                             <p className="text-white/70 xl:text-xl max-w-lg mb-10 font-light">Es fundamental que todos los propietarios acudan a nuestras oficinas corporativas para finalizar su proceso.</p>
                         </div>
