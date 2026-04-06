@@ -1,3 +1,4 @@
+import { ComparisonSection } from "./sections/ComparisonSection";
 import { CTASection } from "./sections/CTASection";
 import { DetailSection } from "./sections/DetailSection";
 import { HeroSection } from "./sections/HeroSection";
@@ -12,6 +13,7 @@ export default function Home() {
             <DetailSection />
             <CTASection />
             <QuoteSection />
+            <ComparisonSection />
         </main>
     );
 }
