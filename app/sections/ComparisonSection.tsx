@@ -1,15 +1,73 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
+
+import question from "@/app/assets/circuito-question.webp";
+import Image from "next/image";
 
 export function ComparisonSection() {
+    const sectionRef = useRef<HTMLElement>(null);
+    const isInView = useInView(sectionRef, { amount: 0.3 });
+    const [isFooterInView, setIsFooterInView] = useState(false);
+    const showQuestionImg = isInView && !isFooterInView;
+
+    useEffect(() => {
+        const footer = document.querySelector("footer");
+        if (!footer) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsFooterInView(entry.isIntersecting);
+            },
+            // { rootMargin: "-10% 0px 0px 0px" }
+        );
+
+        observer.observe(footer);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section className="py-32 px-8 bg-surface-container-low overflow-hidden">
+        <section ref={sectionRef} className="relative py-32 px-8 bg-surface-container-low overflow-hidden">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: "1rem" }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                viewport={{ once: true }}
+                className="absolute w-fit z-10 bottom-0 right-0 hidden xl:block"
+            >
+                <Image
+                    id="question"
+                    src={question}
+                    width={512}
+                    height={743}
+                    alt="Imagen de una mujer haciendo un gesto de pregunta"
+                    className="w-60"
+                />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{
+                    opacity: showQuestionImg ? 1 : 0,
+                    scale: showQuestionImg ? 1 : 0.8,
+                }}
+                transition={{ duration: 0.2 }}
+                className="fixed w-fit z-10 bottom-0 right-0 xl:hidden"
+            >
+                <Image
+                    id="question"
+                    src={question}
+                    width={512}
+                    height={743}
+                    alt="Imagen de una mujer haciendo un gesto de pregunta"
+                    className="w-40 sm:w-60"
+                />
+            </motion.div>
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 text-center">
-                    <h2 className="text-4xl md:text-5xl font-black text-primary tracking-tighter mb-4">¿Titulación sobre escritura?</h2>
-                    <p className="text-on-surface-variant text-lg">Entendiendo tu Certeza Jurídica</p>
+                    <h2 className="text-4xl md:text-5xl font-black text-primary tracking-tighter mb-4">*¿Titulación sobre escritura?</h2>
+                    <p className="text-on-surface-variant text-lg">Información para el público en general</p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-stretch">
                     <motion.div
@@ -21,7 +79,7 @@ export function ComparisonSection() {
                         <div className="absolute -top-6 left-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-secondary">
                             <CheckCircle2 className="w-8 h-8 text-secondary" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-6 underline decoration-secondary decoration-4 underline-offset-8">
+                        <h3 className="text-2xl font-bold mb-6">
                             Título de Propiedad<br /><span className="text-sm font-normal opacity-70">(INSUS, INMUVI, COESVI)</span>
                         </h3>
                         <p className="text-white/80 leading-relaxed text-lg">
@@ -37,7 +95,7 @@ export function ComparisonSection() {
                         <div className="absolute -top-6 left-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-secondary">
                             <CheckCircle2 className="w-8 h-8 text-secondary" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-6 underline decoration-secondary decoration-4 underline-offset-8">
+                        <h3 className="text-2xl font-bold mb-6">
                             Escritura en Notaría
                         </h3>
                         <p className="text-white/80 leading-relaxed text-lg">
