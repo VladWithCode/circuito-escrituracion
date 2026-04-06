@@ -25,7 +25,7 @@ export function logContactRequest({
     customerName: string;
     date: Date;
 }) {
-    const logMessage = `[Solicitud de escrituras] ${date.toLocaleDateString(
+    const logMessage = `[Solicitud de titulo] ${date.toLocaleDateString(
         'es-MX'
     )}
 Cliente: ${customerName}

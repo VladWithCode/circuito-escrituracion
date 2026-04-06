@@ -38,7 +38,7 @@ export function ContactFormDialog({ open, onOpenChange }: ContactFromDialogProps
 
         setSubmitting(false);
         onOpenChange(false);
-        toast.success("Se ha enviado la solicitud de escrituras");
+        toast.success("Se ha enviado la solicitud de titulo");
     }, [onOpenChange]);
 
     return (
@@ -53,7 +53,7 @@ export function ContactFormDialog({ open, onOpenChange }: ContactFromDialogProps
                 </div>
                 <form className="contents" id="contact-form" onSubmit={form.handleSubmit(handleSubmit)}>
                     <DialogHeader>
-                        <DialogTitle>Solicitar escrituras</DialogTitle>
+                        <DialogTitle>Solicitar Titulo</DialogTitle>
                         <DialogDescription>
                             Ingresa tus datos y nos pondremos en contacto para agendar tu cita.
                         </DialogDescription>
